@@ -24,6 +24,9 @@ namespace location {
          * Reset system
          */
         //% blockId=location_reset block="reset location"
+        //% position.defl=position
+        //% weight=85 blockGap=8
+        //% parts="location"
         reset(): boolean {
             this.currentLocation = { x: 0, y: 0 };
             return true;
@@ -33,6 +36,9 @@ namespace location {
          * Read location
          */
         //% blockId=location_read block="read coördinates"
+        //% position.defl=position
+        //% weight=85 blockGap=8
+        //% parts="location"
         read(): {x:number;y:number} {
             return this.currentLocation;
         }
@@ -41,6 +47,9 @@ namespace location {
          * Goto a location
          */
         //% blockId=location_goto block="goto %x %y"
+        //% position.defl=position
+        //% weight=85 blockGap=8
+        //% parts="location"
         goto(x: number, y: number): boolean {
             this.currentLocation = {x, y };
             return true;
