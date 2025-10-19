@@ -24,7 +24,12 @@ namespace location {
 
     export class position {
         // currentLocation: {x:number;y:number} = { x: 0, y: 0 };
-        currentLocation: Location = new Location();
+        currentLocation: Location;
+        
+        constructor(){
+            this.currentLocation = new Location();
+        }
+
         /**
          * Reset system
          */
