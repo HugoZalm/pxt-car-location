@@ -12,7 +12,7 @@ enum TropicalFruit {
  * Control your CuteBot Pro in an environment with rectangular coördinates .
  */
 //% weight=70 icon="\uf84c" color=#EC7505
-namespace location {
+namespace carLocation {
     export class Location {
         x: number;
         y: number;
@@ -23,7 +23,7 @@ namespace location {
     }
 
     export class position {
-        
+
         // currentLocation: {x:number;y:number} = { x: 0, y: 0 };
         currentLocation: Location;
 
