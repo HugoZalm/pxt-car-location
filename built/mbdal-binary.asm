@@ -26,24 +26,24 @@
     ;
 ; Function main.ts(1,1): <main>
     ;
-    .object _main___P3067 "main.ts(1,1): <main>"
-_main___P3067_pre:
+    .object _main___P3068 "main.ts(1,1): <main>"
+_main___P3068_pre:
     .section code
     .balign 4
-_main___P3067_Lit:
+_main___P3068_Lit:
     .word pxt::RefAction_vtable
     .short 0, 0 ; no captured vars
-    .word _main___P3067_args@fn
-_main___P3067_args:
+    .word _main___P3068_args@fn
+_main___P3068_args:
     .section code
-_main___P3067:
-_main___P3067_nochk:
+_main___P3068:
+_main___P3068_nochk:
     @stackmark func
     @stackmark args
     push {lr}
 .locals:
     @stackmark locals
-_main___P3067_locals:
+_main___P3068_locals:
     movs r0, #0
     ldr r7, [r6, #0]
     str r0, [r7, #4]
@@ -52,11 +52,11 @@ _main___P3067_locals:
     ldr r7, [r6, #0]
     str r0, [r7, #8]
     @stackempty locals
-.ret.3067:
+.ret.3068:
     @stackempty locals
     movs r0, #0
 .final_0_1:
-_main___P3067_end:
+_main___P3068_end:
     pop {pc}
     @stackempty func
     @stackempty args
