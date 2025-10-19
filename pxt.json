@@ -1,0 +1,16 @@
+{
+    "name": "pxt-car-location",
+    "version": "0.0.1",
+    "files": [
+        "main.ts"
+    ],
+    "supportedTargets": [
+        "microbit"
+    ],
+    "dependencies": {
+        "core": "*",
+        "radio": "*",
+        "microphone": "*"
+    },
+    "testDependencies": {}
+}
