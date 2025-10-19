@@ -25,6 +25,7 @@ console.log(`✅ Version bumped to ${json.version}`);
 // if (!isHook) {
     const tag = `v${json.version}`;
     // execSync('git add pxt.json');
+    execSync('git add -A'); // stages everything (not just pxt.json)
     execSync(`git commit -m "Release ${tag}"`);
     execSync(`git tag ${tag}`);
     console.log(`✅ Committed and tagged as ${tag}`);
