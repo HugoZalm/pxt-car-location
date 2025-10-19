@@ -21,11 +21,11 @@ fs.writeFileSync(path, JSON.stringify(json, null, 4) + '\n');
 
 console.log(`✅ Version bumped to ${json.version}`);
 
-// Only tag/commit if not running inside Git hook
-if (!isHook) {
+//Only tag/commit if not running inside Git hook
+// if (!isHook) {
     const tag = `v${json.version}`;
-    execSync('git add pxt.json');
+    // execSync('git add pxt.json');
     execSync(`git commit -m "Release ${tag}"`);
     execSync(`git tag ${tag}`);
     console.log(`✅ Committed and tagged as ${tag}`);
-}
+// }
