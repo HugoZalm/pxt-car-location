@@ -23,10 +23,21 @@ json.version = `${major}.${minor}.${patch}`;
 fs.writeFileSync(path, JSON.stringify(json, null, 4) + '\n');
 
 // Commit and tag the version (optional)
-const { execSync } = require('child_process');
-const tag = `v${json.version}`;
-execSync('git add pxt.json');
-execSync(`git commit -m "Release ${tag}"`);
-execSync(`git tag ${tag}`);
+// const { execSync } = require('child_process');
+// const tag = `v${json.version}`;
+// execSync('git add pxt.json');
+// execSync(`git commit -m "Release ${tag}"`);
+// execSync(`git tag ${tag}`);
 
-console.log(`✅ Version bumped to ${json.version} and tagged as ${tag}`);
+// console.log(`✅ Version bumped to ${json.version} and tagged as ${tag}`);
+
+
+// Only tag/commit if not running inside Git hook
+if (!isHook) {
+    const { execSync } = require('child_process');
+    const tag = `v${json.version}`;
+    execSync('git add pxt.json');
+    execSync(`git commit -m "Release ${tag}"`);
+    execSync(`git tag ${tag}`);
+    console.log(`✅ Committed and tagged as ${tag}`);
+}
