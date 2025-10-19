@@ -7,19 +7,20 @@ enum TropicalFruit {
     Coconut = 2
 }
 
-// export interface Location {
-//     x: number;
-//     y: number;
-// }
 
 /**
  * Control your CuteBot Pro in an environment with rectangular coördinates .
  */
 //% weight=70 icon="\uf84c" color=#EC7505
 namespace location {
+    export interface Location {
+        x: number;
+        y: number;
+    }
 
     export class position {
-        currentLocation: {x:number;y:number} = { x: 0, y: 0 };
+        // currentLocation: {x:number;y:number} = { x: 0, y: 0 };
+        currentLocation: Location = { x: 0, y: 0 };
         /**
          * Reset system
          */
@@ -39,7 +40,8 @@ namespace location {
         //% position.defl=position
         //% weight=85 blockGap=8
         //% parts="location"
-        read(): {x:number;y:number} {
+        // read(): {x:number;y:number} {
+        read(): Location {
             return this.currentLocation;
         }
 
