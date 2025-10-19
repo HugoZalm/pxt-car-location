@@ -17,8 +17,8 @@ namespace carLocation {
         x: number;
         y: number;
         constructor(x?: number, y?: number) {
-            this.x = x | -1;
-            this.y = y | -1;
+            this.x = x ?? -1;
+            this.y = y ?? -1;
         }
     }
 
@@ -39,7 +39,7 @@ namespace carLocation {
         //% weight=85 blockGap=8
         //% parts="location"
         reset(): boolean {
-            this.currentLocation = new Location();
+            this.currentLocation = new Location(0,0);
             return true;
         }
 

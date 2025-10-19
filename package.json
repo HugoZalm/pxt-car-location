@@ -1,0 +1,7 @@
+{
+  "name": "pxt-car-location",
+  "scripts": {
+    "version": "node version.js"
+  },
+  "devDependencies": {}
+}
