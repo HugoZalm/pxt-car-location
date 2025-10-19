@@ -18,7 +18,7 @@ enum TropicalFruit {
 //% weight=70 icon="\uf84c" color=#EC7505
 namespace location {
 
-    export class location {
+    export class position {
         currentLocation: {x:number;y:number} = { x: 0, y: 0 };
         /**
          * Reset system
