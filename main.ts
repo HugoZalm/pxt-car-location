@@ -23,7 +23,7 @@ namespace location {
         /**
          * Reset system
          */
-        //% blockId=location_reset block="reset location"
+        //% blockId=position_reset block="reset location"
         //% position.defl=position
         //% weight=85 blockGap=8
         //% parts="location"
@@ -35,7 +35,7 @@ namespace location {
         /**
          * Read location
          */
-        //% blockId=location_read block="read coördinates"
+        //% blockId=position_read block="read coördinates"
         //% position.defl=position
         //% weight=85 blockGap=8
         //% parts="location"
@@ -46,7 +46,7 @@ namespace location {
         /**
          * Goto a location
          */
-        //% blockId=location_goto block="goto %x %y"
+        //% blockId=position_goto block="goto %x %y"
         //% position.defl=position
         //% weight=85 blockGap=8
         //% parts="location"
