@@ -1,35 +1,14 @@
-enum TropicalFruit {
-    //% block=banana
-    Banana = 0,
-    //% block=pineapple
-    Pinapple = 1,
-    //% block=coconut
-    Coconut = 2
-}
-
+import { LocationService, Location } from "./location.service";
 
 /**
- * Control your CuteBot Pro in an environment with rectangular coördinates .
+ * Control your CuteBot Pro in an environment with rectangular coördinates.
  */
 //% weight=70 icon="\uf84c" color=#EC7505
 namespace carLocation {
-    export class Location {
-        x: number;
-        y: number;
-        constructor(x?: number, y?: number) {
-            this.x = x ? x : -1;
-            this.y = y ? y : -1;
-        }
-    }
 
-    export class position {
+    export class Position {
 
-        // currentLocation: {x:number;y:number} = { x: 0, y: 0 };
-        currentLocation: Location;
-
-        constructor(){
-            this.currentLocation = new Location();
-        }
+        locationService = new LocationService();
 
         /**
          * Reset system
@@ -39,7 +18,7 @@ namespace carLocation {
         //% weight=85 blockGap=8
         //% parts="location"
         reset(): boolean {
-            this.currentLocation = new Location(0,0);
+            this.locationService.reset();
             return true;
         }
 
@@ -52,7 +31,7 @@ namespace carLocation {
         //% parts="location"
         // read(): {x:number;y:number} {
         read(): Location {
-            return this.currentLocation;
+            return this.locationService.read();
         }
 
         /**
@@ -63,7 +42,7 @@ namespace carLocation {
         //% weight=85 blockGap=8
         //% parts="location"
         goto(x: number, y: number): boolean {
-            this.currentLocation = new Location(x,y); //{x, y };
+            this.locationService.goto(x,y);
             return true;
         }
 

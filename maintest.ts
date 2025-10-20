@@ -1,13 +1,14 @@
-let position = new location.position()
+import { LocationService } from "./location.service";
 
-    let current = position.read()
-    console.log("Current position: " + current.x + ", " + current.y)
+let locationService = new LocationService();
 
-    position.reset()
-    current = position.read()
-    console.log("Current position: " + current.x + ", " + current.y)
+let current = locationService.read();
+console.log("Current LocationService: " + current.x + ", " + current.y);
 
-    position.goto(10, 10)
-    current = position.read()
-    console.log("Current position: " + current.x + ", " + current.y)
+locationService.reset();
+current = locationService.read();
+console.log("Current LocationService: " + current.x + ", " + current.y);
 
+locationService.goto(10, 10);
+current = locationService.read();
+console.log("Current LocationService: " + current.x + ", " + current.y);
